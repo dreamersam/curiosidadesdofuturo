@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noix</title>
+    <script></script>
+
+
+</head>
+   
+
+<style>
+
+    h2{
+        color: azure;
+
+    }
+</style>
+
+<body>
+
+    <audio autoplay>
+         <source src="Careless Whisper (320).mp3">
+
+    </audio>
+    <div id="conteudo"> 
+        <h2>Aceita Namorar Comigo? </h2>
+        <button onmousedown="sound1.play().mp3" class="btn" onclick="sim()">SIM</button>
+        
+        <button class="btn" onmouseover="desvia(this)">NAO</button>
+       
+       </div>
+        <script>
+            var sound1 = new Audio();
+            sound1.src = "sound1.play().mp3"
+
+        </script>   
+</body>
+
+ 
+<style>
+  @font-face {
+ font-family: Fontededomingo;
+src: url(Anerome\ Stamped.ttf);
+
+  }
+* {
+        margin: 0;
+        padding: 20px;
+        box-sizing: 0; 
+    }
+    body {
+        width: 100vw;
+        height: 100vh;
+        background-image: url('12547479-1675525939332405-254610031-n-167217.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        text-align: center;
+        font-family: Fontededomingo;
+        font-size: 40px;
+    
+    }
+.btn{
+    background: rgb(126, 105, 105);
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 80px;
+    border-radius: 10px;
+
+  
+ }
+</style>
+<script>
+    function sim(){
+     alert("voce aceitou namorar comigo, parabens!" )
+    }
+
+ 
+    function desvia(t){
+     var btn = t;
+     btn.style.position = 'absolute';
+     btn.style.bottom = geraPosicao(10, 90);
+     btn.style.left = geraPosicao(0, 100);
+     console.log("opa, desviei...");
+    }
+    
+ 
+    function geraPosicao(min, max) {
+      return (Math.random() * (max - min) + min) + "%";
+    }
+ 
+ 
+ 
+ 
+
+ </script>
+
+
+</html>
